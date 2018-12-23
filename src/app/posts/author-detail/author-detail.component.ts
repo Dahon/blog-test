@@ -22,7 +22,6 @@ export class AuthorDetailComponent implements OnInit {
     .subscribe((params: Params) => {
       this.service.getFullUser(params['id'])
         .subscribe(data => {
-          console.log(data)
           this.user = data[0];
           this.posts = data[1];
         })

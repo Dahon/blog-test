@@ -34,11 +34,7 @@ export class PostsComponent implements OnInit {
   }
 
   setPage(page: number) {
-    console.log(page)
-    // get pager object from service
     this.pager = this.pagerService.getPager(this.posts.length, page);
-    // get current page of items
-    console.log(this.pager)
     this.pagedItems = this.posts.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
 

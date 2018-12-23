@@ -39,13 +39,6 @@ export class PostsService extends BaseApi {
         this.store.dispatch(new LoadUsers(data[1]))
       })
   }
-  // getPost(id: number){
-  //   return this.get(`posts/${id}`);
-  // }
-  // getComment(id: number){
-  //   return this.get(`comments/${id}`);
-  // }
-
   getFullPost(id){
     let post = this.get(`posts/${id}`);
     let comment = this.get(`comments/?postId=${id}`);
