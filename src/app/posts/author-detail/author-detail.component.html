@@ -1,0 +1,18 @@
+<div class="col-md-12" *ngIf="user">
+    <h3>name: {{user.name}}</h3>
+    <p>username: {{user.username}}</p>
+    <p>email: {{user.email}}</p>
+    <p>address: {{user.address.street}} {{user.address.suite}} {{user.address.street}}</p>
+    <p>phone: {{user.phone}}</p>
+    <p>website: {{user.website}}</p>
+    <p>company: {{user.company.name}}</p>
+  </div>
+  <div class="col-md-12" *ngIf="posts">
+    <h3>Articles</h3>
+    <div class="list-group">
+      <div class="list-group-item" *ngFor="let post of posts">
+        <p>Title: <a [routerLink]="['/post', post.id]">{{post.title}}</a></p>
+        <p>Text: {{post.body}}</p>
+      </div>
+    </div>
+  </div>

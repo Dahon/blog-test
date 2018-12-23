@@ -1,0 +1,16 @@
+<div class="list-group-item mt-5">
+  <h2><a [routerLink]="['/post', post.id]">{{post.title}}</a></h2>
+  <p>{{post.body | slice:0:100}}</p>
+  <p>Рейтинг:<span>{{post.raiting}}</span></p>
+  <div class="row">
+    <div class="col-md-1">
+      <div class="col-md-6">
+        <a href="" (click)="like()" class="bg-primary">Like</a>
+      </div>
+      <div class="col-md-6">
+        <a href="" (click)="dislike()" class="bg-danger">Dislike</a>
+      </div>
+    </div>
+    <div class="col-md-12">Author: <a [routerLink]="['/author', post.userId]">{{author.name}}</a></div>
+  </div>
+</div>

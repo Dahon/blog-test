@@ -1,0 +1,15 @@
+<div class="col-md-12" *ngIf="post">
+  <h1>{{post.title}}</h1>
+  <p>{{post.body}}</p>
+  <p>Author: {{post.userId}}</p>
+</div>
+<div class="col-md-12" *ngIf="comments">
+  <h3>Комментарий</h3>
+  <div class="list-group" *ngIf="comments">
+    <div class="list-group-item" *ngFor="let comment of comments">
+      <p>Имя: {{comment.name}}</p>
+      <p>Текст: {{comment.body}}</p>
+      <p>Почта: {{comment.email}}</p>
+    </div>
+  </div>
+</div>
