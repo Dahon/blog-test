@@ -1,14 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query">
-    </div>
-    <div class="col-md-12">
-      <div class="list-group mt-5">
-        <app-post [post]="post" [users]="users" *ngFor="let post of pagedItems | search : query">
-        </app-post>
+  <div class="container">
+    <div class="row">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query">
       </div>
-    </div>
+      <div class="col-md-12">
+        <div class="list-group mt-5">
+          <app-post [post]="post" [users]="users" *ngFor="let post of pagedItems | search : query">
+          </app-post>
+        </div>
+      </div>
     <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
       <li [ngClass]="{disabled:pager.currentPage === 1}">
         <a (click)="setPage(1)">First</a>
